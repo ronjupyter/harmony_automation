@@ -325,12 +325,12 @@ def scrape_with_bsoup(ticket_str: str) -> str:
     Parameters
     ----------
     ticket_str : str
-        str - "<ticket_num> <employee_id> - "
+        str - "[ticket_num] [employee_id] - "
 
     Returns
     -------
     str
-        str - "<employee_id> - <notes/comments>  <url>"
+        str - "[employee_id] - [notes/comments]  [url]"
     """
     note_start = ticket_str.split(" ", 1)[-1]
     ticket_num = ticket_str.split(" ", 1)[0]
