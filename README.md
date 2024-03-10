@@ -13,3 +13,5 @@ easily and quickly completed in bulk/batches. Manually closing and
 re-assigning up to 100+ logs at a time proved to be a tedious hassle, so
 I created some scripts to automate the process using
 [Selenium](https://www.selenium.dev/).
+
+[Documentation](https://ronjupyter.github.io/harmony_automation/)
