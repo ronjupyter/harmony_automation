@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="…">
 
-<title>harmony_automation</title>
+<title>harmony_automation - 00_core</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,11 +70,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="harmony_automation">
-<meta property="og:description" content=".">
+<meta property="og:title" content="harmony_automation - 00_core">
+<meta property="og:description" content="…">
 <meta property="og:site_name" content="harmony_automation">
-<meta name="twitter:title" content="harmony_automation">
-<meta name="twitter:description" content=".">
+<meta name="twitter:title" content="harmony_automation - 00_core">
+<meta name="twitter:description" content="…">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -98,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">harmony_automation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./core.html">00_core</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -112,13 +113,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">harmony_automation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./core.html" class="sidebar-item-text sidebar-link">
+  <a href="./core.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">00_core</span></a>
   </div>
 </li>
@@ -128,16 +129,57 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#init-fxs" id="toc-init-fxs" class="nav-link active" data-scroll-target="#init-fxs">00 init fxs</a>
+  <ul class="collapse">
+  <li><a href="#fp" id="toc-fp" class="nav-link" data-scroll-target="#fp">fp</a></li>
+  <li><a href="#return_yaml_data" id="toc-return_yaml_data" class="nav-link" data-scroll-target="#return_yaml_data">return_yaml_data</a></li>
+  </ul></li>
+  <li><a href="#find-xpath-elements" id="toc-find-xpath-elements" class="nav-link" data-scroll-target="#find-xpath-elements">01 find xpath elements</a>
+  <ul class="collapse">
+  <li><a href="#search_for_xpath_elem" id="toc-search_for_xpath_elem" class="nav-link" data-scroll-target="#search_for_xpath_elem">search_for_xpath_elem</a></li>
+  </ul></li>
+  <li><a href="#load-data" id="toc-load-data" class="nav-link" data-scroll-target="#load-data">02 load data</a>
+  <ul class="collapse">
+  <li><a href="#return_data" id="toc-return_data" class="nav-link" data-scroll-target="#return_data">return_data</a></li>
+  </ul></li>
+  <li><a href="#harmony-specific-actions" id="toc-harmony-specific-actions" class="nav-link" data-scroll-target="#harmony-specific-actions">03 harmony specific actions</a>
+  <ul class="collapse">
+  <li><a href="#reassign_log" id="toc-reassign_log" class="nav-link" data-scroll-target="#reassign_log">reassign_log</a></li>
+  <li><a href="#submit_res" id="toc-submit_res" class="nav-link" data-scroll-target="#submit_res">submit_res</a></li>
+  <li><a href="#edit_res" id="toc-edit_res" class="nav-link" data-scroll-target="#edit_res">edit_res</a></li>
+  <li><a href="#click_edit_log" id="toc-click_edit_log" class="nav-link" data-scroll-target="#click_edit_log">click_edit_log</a></li>
+  <li><a href="#view_log" id="toc-view_log" class="nav-link" data-scroll-target="#view_log">view_log</a></li>
+  <li><a href="#search_ticket_num" id="toc-search_ticket_num" class="nav-link" data-scroll-target="#search_ticket_num">search_ticket_num</a></li>
+  <li><a href="#login" id="toc-login" class="nav-link" data-scroll-target="#login">login</a></li>
+  </ul></li>
+  <li><a href="#scrape-fxs" id="toc-scrape-fxs" class="nav-link" data-scroll-target="#scrape-fxs">04 scrape fxs</a>
+  <ul class="collapse">
+  <li><a href="#load_edited_details" id="toc-load_edited_details" class="nav-link" data-scroll-target="#load_edited_details">load_edited_details</a></li>
+  <li><a href="#scraped_notes_to_df" id="toc-scraped_notes_to_df" class="nav-link" data-scroll-target="#scraped_notes_to_df">scraped_notes_to_df</a></li>
+  <li><a href="#scrape_with_bsoup" id="toc-scrape_with_bsoup" class="nav-link" data-scroll-target="#scrape_with_bsoup">scrape_with_bsoup</a></li>
+  <li><a href="#extract_notes_from_page_source" id="toc-extract_notes_from_page_source" class="nav-link" data-scroll-target="#extract_notes_from_page_source">extract_notes_from_page_source</a></li>
+  <li><a href="#test_page_source_ok" id="toc-test_page_source_ok" class="nav-link" data-scroll-target="#test_page_source_ok">test_page_source_ok</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">harmony_automation</h1>
+<h1 class="title">00_core</h1>
 </div>
 
+<div>
+  <div class="description">
+    …
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -153,10 +195,427 @@ ul.task-list li input[type="checkbox"] {
 
 
 <!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
-<p>As I am the main person responsible for data updates for Sears, there can be upwards of 100+ tickets/logs to process on a bi-weekly basis. Some logs can be closed after the update process, while others need to be re-assigned for further processing.</p>
-<p>The update process has been streamlined to the point that updates can be easily and quickly completed in bulk/batches. Manually closing and re-assigning up to 100+ logs at a time proved to be a tedious hassle, so I created some scripts to automate the process using <a href="https://www.selenium.dev/">Selenium</a>.</p>
+<section id="init-fxs" class="level1">
+<h1>00 init fxs</h1>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L42" target="_blank" style="float:right; font-size:smaller">source</a></p>
+<section id="fp" class="level3">
+<h3 class="anchored" data-anchor-id="fp">fp</h3>
+<blockquote class="blockquote">
+<pre><code> fp (relative_fp:str, base_dir:str='.')</code></pre>
+</blockquote>
+<p>If imported, pkg dir == <code>pkg/pkg</code> and relative paths are the same as in notebook env. Need to adjust when running <code>nbdev_docs</code>.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Type</strong></th>
+<th><strong>Default</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>relative_fp</td>
+<td>str</td>
+<td></td>
+<td>str - eg. “../dir/file.txt”</td>
+</tr>
+<tr class="even">
+<td>base_dir</td>
+<td>str</td>
+<td>.</td>
+<td>str</td>
+</tr>
+<tr class="odd">
+<td><strong>Returns</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td><strong>str</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L65" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="return_yaml_data" class="level3">
+<h3 class="anchored" data-anchor-id="return_yaml_data">return_yaml_data</h3>
+<blockquote class="blockquote">
+<pre><code> return_yaml_data (file_path:str)</code></pre>
+</blockquote>
+<p>…</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Type</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>file_path</td>
+<td>str</td>
+<td>str</td>
+</tr>
+<tr class="even">
+<td><strong>Returns</strong></td>
+<td><strong>dict</strong></td>
+<td><strong>dict</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="find-xpath-elements" class="level1">
+<h1>01 find xpath elements</h1>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L90" target="_blank" style="float:right; font-size:smaller">source</a></p>
+<section id="search_for_xpath_elem" class="level3">
+<h3 class="anchored" data-anchor-id="search_for_xpath_elem">search_for_xpath_elem</h3>
+<blockquote class="blockquote">
+<pre><code> search_for_xpath_elem (xpath_str:str, time_limit:int=30)</code></pre>
+</blockquote>
+<p>While len of search list is 0, keep searching. If exceeds time limit (seconds, approximate), returns empty list.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Type</strong></th>
+<th><strong>Default</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>xpath_str</td>
+<td>str</td>
+<td></td>
+<td>str</td>
+</tr>
+<tr class="even">
+<td>time_limit</td>
+<td>int</td>
+<td>30</td>
+<td>int</td>
+</tr>
+<tr class="odd">
+<td><strong>Returns</strong></td>
+<td><strong>list</strong></td>
+<td></td>
+<td><strong>List[WebElement]</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="load-data" class="level1">
+<h1>02 load data</h1>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L120" target="_blank" style="float:right; font-size:smaller">source</a></p>
+<section id="return_data" class="level3">
+<h3 class="anchored" data-anchor-id="return_data">return_data</h3>
+<blockquote class="blockquote">
+<pre><code> return_data ()</code></pre>
+</blockquote>
+<p>Load and clean one of the output files created from the update script - <code>for_log_tracker_...xlsx</code></p>
+</section>
+</section>
+<section id="harmony-specific-actions" class="level1">
+<h1>03 harmony specific actions</h1>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L242" target="_blank" style="float:right; font-size:smaller">source</a></p>
+<section id="reassign_log" class="level3">
+<h3 class="anchored" data-anchor-id="reassign_log">reassign_log</h3>
+<blockquote class="blockquote">
+<pre><code> reassign_log (note:str)</code></pre>
+</blockquote>
+<p>Actions to execute on ticket number search results page</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Type</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>note</td>
+<td>str</td>
+<td>str</td>
+</tr>
+<tr class="even">
+<td><strong>Returns</strong></td>
+<td><strong>None</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L225" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="submit_res" class="level3">
+<h3 class="anchored" data-anchor-id="submit_res">submit_res</h3>
+<blockquote class="blockquote">
+<pre><code> submit_res ()</code></pre>
+</blockquote>
+<p>Clicks <code>submit</code></p>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L202" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="edit_res" class="level3">
+<h3 class="anchored" data-anchor-id="edit_res">edit_res</h3>
+<blockquote class="blockquote">
+<pre><code> edit_res (comment='done')</code></pre>
+</blockquote>
+<p>Add <code>comment</code> to resolution input box</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Type</strong></th>
+<th><strong>Default</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>comment</td>
+<td>str</td>
+<td>done</td>
+<td>str</td>
+</tr>
+<tr class="even">
+<td><strong>Returns</strong></td>
+<td><strong>None</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L195" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="click_edit_log" class="level3">
+<h3 class="anchored" data-anchor-id="click_edit_log">click_edit_log</h3>
+<blockquote class="blockquote">
+<pre><code> click_edit_log ()</code></pre>
+</blockquote>
+<p>Clicks <code>edit</code> button</p>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L182" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="view_log" class="level3">
+<h3 class="anchored" data-anchor-id="view_log">view_log</h3>
+<blockquote class="blockquote">
+<pre><code> view_log ()</code></pre>
+</blockquote>
+<p>Clicks <code>view log</code> of search result</p>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L152" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="search_ticket_num" class="level3">
+<h3 class="anchored" data-anchor-id="search_ticket_num">search_ticket_num</h3>
+<blockquote class="blockquote">
+<pre><code> search_ticket_num (ticket_num:str)</code></pre>
+</blockquote>
+<p>Go to ticket number search page and search for <code>ticket_num</code></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Type</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ticket_num</td>
+<td>str</td>
+<td>str</td>
+</tr>
+<tr class="even">
+<td><strong>Returns</strong></td>
+<td><strong>None</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L139" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="login" class="level3">
+<h3 class="anchored" data-anchor-id="login">login</h3>
+<blockquote class="blockquote">
+<pre><code> login ()</code></pre>
+</blockquote>
+<p>Log in to Harmony</p>
+</section>
+</section>
+<section id="scrape-fxs" class="level1">
+<h1>04 scrape fxs</h1>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L380" target="_blank" style="float:right; font-size:smaller">source</a></p>
+<section id="load_edited_details" class="level3">
+<h3 class="anchored" data-anchor-id="load_edited_details">load_edited_details</h3>
+<blockquote class="blockquote">
+<pre><code> load_edited_details (_=None)</code></pre>
+</blockquote>
+<p>Result of <a href="https://ronjupyter.github.io/harmony_automation/core.html#scraped_notes_to_df"><code>scraped_notes_to_df</code></a> gets exported to excel and manual edits are made, if needed. This function loads the edited file and cleans up the details column to add back to the log tracker.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Type</strong></th>
+<th><strong>Default</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>_</td>
+<td>NoneType</td>
+<td>None</td>
+<td>disregard</td>
+</tr>
+<tr class="even">
+<td><strong>Returns</strong></td>
+<td><strong>list</strong></td>
+<td></td>
+<td><strong>list[str]</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L355" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="scraped_notes_to_df" class="level3">
+<h3 class="anchored" data-anchor-id="scraped_notes_to_df">scraped_notes_to_df</h3>
+<blockquote class="blockquote">
+<pre><code> scraped_notes_to_df (input_ticket_strs:list)</code></pre>
+</blockquote>
+<p>For list of ticket numbers, returns formatted details and add to dataframe - see <a href="https://ronjupyter.github.io/harmony_automation/core.html#scrape_with_bsoup"><code>scrape_with_bsoup</code></a></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Type</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>input_ticket_strs</td>
+<td>list</td>
+<td>list[str]</td>
+</tr>
+<tr class="even">
+<td><strong>Returns</strong></td>
+<td><strong>DataFrame</strong></td>
+<td><strong>pd.DataFrame</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L322" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="scrape_with_bsoup" class="level3">
+<h3 class="anchored" data-anchor-id="scrape_with_bsoup">scrape_with_bsoup</h3>
+<blockquote class="blockquote">
+<pre><code> scrape_with_bsoup (ticket_str:str)</code></pre>
+</blockquote>
+<p>Opens log, extracts/cleans notes/comments, format and return</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 38%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Type</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ticket_str</td>
+<td>str</td>
+<td>str - “<ticket_num> <employee_id> -”</employee_id></ticket_num></td>
+</tr>
+<tr class="even">
+<td><strong>Returns</strong></td>
+<td><strong>str</strong></td>
+<td><strong>str - “<employee_id> - <notes comments=""> <url>”</url></notes></employee_id></strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L303" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="extract_notes_from_page_source" class="level3">
+<h3 class="anchored" data-anchor-id="extract_notes_from_page_source">extract_notes_from_page_source</h3>
+<blockquote class="blockquote">
+<pre><code> extract_notes_from_page_source (page_source:str)</code></pre>
+</blockquote>
+<p>Extracts and cleans notes/comments from log page source</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Type</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>page_source</td>
+<td>str</td>
+<td>str</td>
+</tr>
+<tr class="even">
+<td><strong>Returns</strong></td>
+<td><strong>str</strong></td>
+<td><strong>str</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="https://github.com/ronjupyter/harmony_automation/blob/main/harmony_automation/core.py#L285" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="test_page_source_ok" class="level3">
+<h3 class="anchored" data-anchor-id="test_page_source_ok">test_page_source_ok</h3>
+<blockquote class="blockquote">
+<pre><code> test_page_source_ok (page_source:str)</code></pre>
+</blockquote>
+<p>Checks if the right page is loaded</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Type</strong></th>
+<th><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>page_source</td>
+<td>str</td>
+<td>str</td>
+</tr>
+<tr class="even">
+<td><strong>Returns</strong></td>
+<td><strong>bool</strong></td>
+<td><strong>bool</strong></td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
