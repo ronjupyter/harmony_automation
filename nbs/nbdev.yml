@@ -1,9 +1,0 @@
-project:
-  output-dir: _docs
-
-website:
-  title: "harmony_automation"
-  site-url: "https://ronjupyter.github.io/harmony_automation"
-  description: "."
-  repo-branch: main
-  repo-url: "https://github.com/ronjupyter/harmony_automation"
